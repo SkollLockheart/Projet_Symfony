@@ -26,6 +26,9 @@ class Commentary
     #[ORM\ManyToOne(inversedBy: 'commentaries')]
     private ?Article $article = null;
 
+    #[ORM\ManyToOne(inversedBy: 'commentaries')]
+    private ?User $user = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -75,6 +78,18 @@ class Commentary
     public function setArticle(?Article $article): self
     {
         $this->article = $article;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
 
         return $this;
     }
