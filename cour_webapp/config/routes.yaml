@@ -1,0 +1,9 @@
+controllers:
+    resource: ../src/Controller/
+    type: attribute
+TestController:
+    path: /bonjour
+    controller: App\Controller\TestController::sayHello
+TestController2:
+    path: /bonjour/{name}
+    controller: App\Controller\TestController::sayHelloUtil

@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Compte{% endblock %}
+
+{% block body %}
+    {% for user in compte %}
+        <h3>{{ user.prenom }} {{ user.nom | upper }}</h3>
+    {% endfor %}
+{% endblock %}
